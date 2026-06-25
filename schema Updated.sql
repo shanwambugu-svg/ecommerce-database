@@ -2,16 +2,6 @@
 -- E-commerce Platform Database Schema
 -- Engine: PostgreSQL (free, open-source)
 -- ============================================================
--- Design notes (explain these in your report's Implementation section):
--- 1. Normalized to 3NF: no repeating groups, every non-key attribute
---    depends only on its table's primary key.
--- 2. order_items.unit_price is a deliberate snapshot of price at the
---    time of purchase, so historical orders aren't affected by later
---    price changes on the products table.
--- 3. addresses is shared by both shipping and billing via address_type,
---    avoiding a redundant second table with identical structure.
--- 4. categories is self-referencing to support subcategories.
--- ============================================================
 
 DROP TABLE IF EXISTS reviews CASCADE;
 DROP TABLE IF EXISTS payments CASCADE;
